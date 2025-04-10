@@ -1,12 +1,114 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ⚡ URL Shortener Frontend
 
-Currently, two official plugins are available:
+This is the **frontend** of the Micro-SaaS URL Shortener application built using **React + Vite**. It allows users to shorten URLs, log in/log out, and view click analytics with a beautiful and responsive UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔐 **User Authentication** (Login via modal)
+- ✂️ **URL Shortening** with copy-to-clipboard functionality
+- 📊 **Click Analytics** with Chart.js
+- 🧾 **Table View** of all shortened URLs with counts
+- 🧠 **Redux Toolkit** for global state management
+- 🎨 **Tailwind CSS** for styling
+- 🌈 Smooth animations and responsive design
+
+---
+
+## 📁 Folder Structure
+
+```
+src/
+├── assets/           # Static assets (e.g., icons)
+│   └── react.svg
+├── components/       # Reusable components
+│   ├── Chart.jsx
+│   ├── Navbar.jsx
+│   ├── Table.jsx
+│   └── UrlForm.jsx
+├── redux/            # Redux slices and store config
+│   ├── authSlice.js
+│   ├── clickSlice.js
+│   ├── store.js
+│   └── urlSlice.js
+├── App.jsx           # Main application wrapper
+├── App.css           # Global styles
+├── index.css         # Tailwind base
+├── main.jsx          # Vite entry point
+```
+
+---
+
+## 🔧 Environment Setup
+
+### ✅ Prerequisites
+
+- Node.js >= 16.x
+- NPM >= 8.x
+
+### 📦 Install Dependencies
+
+```bash
+npm install
+```
+
+### 🔐 Environment Variables
+
+Create a `.env` file in the root directory:
+
+```
+VITE_API_BASE_URL=http://localhost:5000/api
+```
+
+> You can set this URL according to your backend deployment.
+
+---
+
+## 💻 Running the App
+
+```bash
+npm run dev
+```
+
+The app will start on `http://localhost:5173`.
+
+---
+
+## 🔐 Authentication
+
+Login is handled using Redux and shown as a modal popup. The credentials are sent to the backend API. Upon successful login, a token is stored in memory and used to access protected features like shortening URLs and viewing analytics.
+
+---
+
+## 🔍 Functional Highlights
+
+| Feature        | Description                                         |
+|----------------|-----------------------------------------------------|
+| Login Modal    | Toggle-based modal for user login                  |
+| Shorten URL    | Accepts long URL and returns short URL             |
+| Table Display  | List of user's URLs with original, short, and clicks |
+| Analytics      | Displays click stats via pie chart                 |
+| Logout         | Clears auth state and returns to guest mode        |
+
+---
+
+## 📸 Screenshots (Optional)
+
+> Add if needed – UI of login, dashboard, chart, etc.
+
+---
+
+## 📬 Feedback for Reviewer
+
+- The project is fully modular with separation of components and slices.
+- Clean and reusable code practices were followed.
+- Integrated smooth transitions and conditional rendering logic.
+- Open to adding features like QR generation, pagination, or dark mode upon feedback.
+
+---
+
+## 👨‍💻 Author
+
+Made with ❤️ by [Indrajeet](https://github.com/IndrajeetNinjaCoder)

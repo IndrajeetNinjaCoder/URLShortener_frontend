@@ -13,7 +13,6 @@ This is the **frontend** of the Micro-SaaS URL Shortener application built using
 - 🧾 **Table View** of all shortened URLs with counts
 - 🧠 **Redux Toolkit** for global state management
 - 🎨 **Tailwind CSS** for styling
-- 🌈 Smooth animations and responsive design
 
 ---
 
@@ -59,7 +58,7 @@ npm install
 Create a `.env` file in the root directory:
 
 ```
-VITE_API_BASE_URL=http://localhost:5000/api
+VITE_API_BASE_URL=http://localhost:5000/
 ```
 
 > You can set this URL according to your backend deployment.
@@ -94,21 +93,10 @@ Login is handled using Redux and shown as a modal popup. The credentials are sen
 
 ---
 
-## 📸 Screenshots (Optional)
-
-> Add if needed – UI of login, dashboard, chart, etc.
-
----
-
 ## 📬 Feedback for Reviewer
 
 - The project is fully modular with separation of components and slices.
 - Clean and reusable code practices were followed.
 - Integrated smooth transitions and conditional rendering logic.
-- Open to adding features like QR generation, pagination, or dark mode upon feedback.
 
 ---
-
-## 👨‍💻 Author
-
-Made with ❤️ by [Indrajeet](https://github.com/IndrajeetNinjaCoder)

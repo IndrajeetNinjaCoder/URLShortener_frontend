@@ -8,9 +8,7 @@ function App() {
   return (
     <>
     <Navbar />
-    <div className="mx-20">
-      {/* <Card /> */}
-      
+    <div className="mx-20">          
       <UrlForm />
       <Table />
       <Chart />

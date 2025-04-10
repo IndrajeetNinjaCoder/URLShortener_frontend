@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUrls } from "../redux/urlSlice";
+const baseUrl = import.meta.env.VITE_BASE_URL
 
 export const Table = () => {
+  
   const dispatch = useDispatch();
   const { urls, loading, error, createdUrl } = useSelector(
     (state) => state.url
@@ -65,7 +67,7 @@ export const Table = () => {
               </thead>
               <tbody className="text-gray-700">
                 {paginatedData.map((item, index) => {
-                  const shortUrl = `http://localhost:8000/${item.shortID}`;
+                  const shortUrl = `${baseUrl}/${item.shortID}`;
                   return (
                     <tr
                       key={index}

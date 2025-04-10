@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createShortUrl, resetCreatedUrl } from "../redux/urlSlice";
+const baseUrl = import.meta.env.VITE_BASE_URL
 
 export const UrlForm = () => {
   const dispatch = useDispatch();
@@ -39,7 +40,7 @@ export const UrlForm = () => {
   };
 
   const handleCopy = () => {
-    const fullUrl = `http://localhost:8000/${createdUrl?.id}`;
+    const fullUrl = `${baseUrl}/${createdUrl?.id}`;
     navigator.clipboard.writeText(fullUrl);
     alert("Short URL copied to clipboard!");
   };
@@ -105,12 +106,12 @@ export const UrlForm = () => {
           <div className="mt-6 p-4 bg-gray-50 border rounded-lg shadow text-center">
             <p className="text-lg font-medium text-gray-800 mb-2">Your Short URL:</p>
             <a
-              href={`http://localhost:8000/${createdUrl.id}`}
+              href={`${baseUrl}/${createdUrl.id}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline break-words"
             >
-              http://localhost:8000/{createdUrl.id}
+              {baseUrl}/{createdUrl.id}
             </a>
             <div className="mt-3">
               <button

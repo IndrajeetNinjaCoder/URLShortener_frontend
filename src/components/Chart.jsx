@@ -100,7 +100,7 @@ export const Chart = () => {
           {/* Devices */}
           <div>
             <h3 className="text-md font-medium mb-2 text-center">Devices</h3>
-            <PieChart width={300} height={200}>
+            <PieChart width={300} height={300}>
               <Pie
                 data={deviceData}
                 dataKey="value"
@@ -125,7 +125,7 @@ export const Chart = () => {
           {/* Browsers */}
           <div>
             <h3 className="text-md font-medium mb-2 text-center">Browsers</h3>
-            <PieChart width={300} height={200}>
+            <PieChart width={300} height={300}>
               <Pie
                 data={browserData}
                 dataKey="value"
